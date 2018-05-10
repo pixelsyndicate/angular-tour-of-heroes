@@ -1,0 +1,15 @@
+<h3>Top Heroes</h3>
+
+<div class="card-group">
+    <div class="card" *ngFor="let hero of heroes">
+        <div class="card-body">
+            <h5 class="card-title">
+                    <a routerLink="/detail/{{hero.id}}" >{{hero.name}}</a>
+             </h5>
+
+        </div>
+    </div>
+</div>
+
+<!-- this is the search element placeholder -->
+<app-hero-search></app-hero-search>

@@ -1,0 +1,18 @@
+<div class="card" *ngIf="messageService.messages.length">
+    <div class="card-body">
+        <div class="row">
+            <div class="col align-self-start">
+                <h5 class="card-title">
+                    Messages</h5>
+            </div>
+            <div class="col align-self-center">
+                &nbsp;
+            </div>
+            <div class="col align-self-end">
+                <button class="clear btn btn-secondary btn-sm float-right" (click)="messageService.clear()">Clear Message Log</button>
+            </div>
+        </div>
+        <h6 class="card-subtitle mb-2 text-muted"> From HeroService</h6>
+        <p class="card-text" *ngFor='let message of messageService.messages'>{{message}}</p>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div id="search-component">
+  <h4>Hero Search</h4>
+ 
+    <div class="input-group">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Search by Name</span>
+  </div>
+  <input #searchBox class="form-control" aria-label="Search by Name" (keyup)="search(searchBox.value)">
+</div>
+    
+ 
+  <ul class="list-group list-group-flush">
+    <li *ngFor="let hero of heroes$ | async"  class="list-group-item list-group-item-action " >
+      <a routerLink="/detail/{{hero.id}}" class="">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>

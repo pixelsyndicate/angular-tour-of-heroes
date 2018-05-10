@@ -1,0 +1,15 @@
+<div *ngIf="hero">
+
+    <h2>{{ hero.name | uppercase }} <small>Details</small></h2>
+    <div class="form">
+
+        <label class="">ID:</label> {{hero.id}}
+        <label class="">Timestamp:</label> {{hero.timestamp | date:'yyyy-M-d HH:mm:ss:ms' }}
+        
+        <br/>
+        <label class="sr-only" for="heroName">Name</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" id="heroName" placeholder="Enter Name" [(ngModel)]="hero.name">
+        <button class="btn btn-success" (click)="save()">save</button>
+        <button class="btn btn-info" (click)="goBack()">go back</button>
+    </div>
+</div>
